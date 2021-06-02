@@ -1,0 +1,16 @@
+---
+layout: home
+---
+
+<section id="about">
+	<div class="container">
+	  <div class="avatar">
+		<img class="img-circle" src="{{ site.baseurl }}static/img/{{ site.avatar }}" alt="Responsive image">
+	  </div>
+	  <h3>Hi! 👋 I'm <strong>{{ site.author }}</strong>, an IOS Software Engineer from cairo, egypt.</h3>
+	  <h3>This is a blog about Apple development and general tips and tricks</h3>
+	  <h3>If you want to know more <a href="{{ site.baseurl }}aboutme.html"> about me</a>.</h3>
+	  <h3>If you want to get in touch, <a href="mailto:{{ site.email }}">drop me an email</a> or <a href="http://twitter.com/{{ site.twitter }}">tweet to me</a></h3>
+	  {% include social.html %}
+	</div>
+</section>
