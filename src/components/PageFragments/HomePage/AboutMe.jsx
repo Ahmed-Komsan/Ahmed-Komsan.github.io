@@ -1,25 +1,30 @@
-import React from 'react';
-import { Row, Col } from 'antd';
-import AboutTile from '../../AbouTile';
-import { stripTags, domHtml } from '../../../utils/stripTags';
+import React from "react";
+import { Row, Col } from "antd";
+import AboutTile from "../../AbouTile";
+import { stripTags, domHtml } from "../../../utils/stripTags";
 
-import SEO from '../../Seo';
+import SEO from "../../Seo";
 
 const pageText = {
-  paraOne: `Hello !! My name is Ahmed Komsan Monteiro. I'm a full stack web developer who is
-    passionate about various web technologies. I like to experiment with different web
-    technologies. I have an experience of nearly 3 years working with LAMP stack, MERN stack
-    and ELK stack. Building fancy UI's just like this one that your seeing 😅 and writing blogs about tech stacks
-    is what Rolwin loves to do. Check my blog which I update every week for some Javascript and some
-    cool notes on web technologies.`,
-  paraTwo: `Currently I work mostly with Javascript technologies like ReactJS and NodeJS. I also
-    have hands on experience working with cloud infrastructures like <b>AWS/GCP</b> and have deployed applications
-    keeping scalability in mind. Docker, Kubernetes, Jenkins, SonarQube are some of the cool
-    tools I use for <b>CI/ CD</b>. I'm always a learner and a self taught programmer.`,
+  paraOne: `👨‍💻&ensp; Hi! 👋 &nbsp;, I'm <b>Ahmed Komsan</b> an IOS Software engineer Doing mobile applications
+  development for +4 years working with different languages like C, C++,
+  Objective-C, Swift and Java. following MVVM, MVVM-C, MVC methods of
+  organizing code. I’m truly passionate about my work and always eager
+  to learn new skills, enthusiastically grabbing onto learning any other
+  programming languages, frameworks or principles and develop new
+  software , apps and products.`,
+  paraTwo: `🎓&ensp; Obtained my bachelor's degree in Computer Science from the cairo University in
+  Egypt ( Faculty of Computers and Information ) focusing on Software
+  Engineering.`,
+  paraThree: `✨&ensp; This blog mostly covers my programming experience venturing into the world of iOS and Swift and
+  my small previous dealing with C/C++. You can also find some rants here, because I do not like when stuff breaks.`,
+  paraFour: `🌃 &ensp; I think the turning point in my career goes back to my second year in college when I decided to join
+  my colleagues in the programming competitions and focusing on the algorithms and competitive programming.`,
+  paraFive: `🤾🏾&ensp; When i'm not working, i love Reading, Playing and Watching Football and blog about IOS Development.`,
 };
 
 const AboutMe = () => {
-  const description = `${pageText.paraOne} ${stripTags(pageText.paraTwo)}`;
+  const description = `${stripTags(pageText.paraOne)} ${stripTags(pageText.paraTwo)} ${stripTags(pageText.paraThree)} ${stripTags(pageText.paraFour)} ${stripTags(pageText.paraFive)}`;
   return (
     <>
       <div>
@@ -27,13 +32,23 @@ const AboutMe = () => {
           title="About"
           description={description}
           path=""
-          keywords={['Rolwin', 'Reevan', 'Monteiro', 'FullStack developer', 'Javascript', 'ReactJS', 'NodeJS', 'Gatsby']}
+          keywords={[
+            "Rolwin",
+            "Reevan",
+            "Monteiro",
+            "FullStack developer",
+            "Javascript",
+            "ReactJS",
+            "NodeJS",
+            "Gatsby",
+          ]}
         />
         <h1 className="titleSeparate">About Me</h1>
-        <p>
-          {pageText.paraOne}
-        </p>
+        <p dangerouslySetInnerHTML={domHtml(pageText.paraOne)} />
         <p dangerouslySetInnerHTML={domHtml(pageText.paraTwo)} />
+        <p dangerouslySetInnerHTML={domHtml(pageText.paraThree)} />
+        <p dangerouslySetInnerHTML={domHtml(pageText.paraFour)} />
+        <p dangerouslySetInnerHTML={domHtml(pageText.paraFive)} />
       </div>
       <Row gutter={[20, 20]}>
         <Col xs={24} sm={24} md={12} lg={8}>
@@ -42,7 +57,7 @@ const AboutMe = () => {
             height={60}
             alt="location image"
             textH4="Born and bought up in"
-            textH3="Mangalore, KA, India"
+            textH3="Cairo, Egypt"
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
@@ -51,32 +66,6 @@ const AboutMe = () => {
             alt="coffee image"
             textH4="Love Coffee"
             textH3="Coffee + Me = Happiness"
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={8}>
-          <AboutTile
-            img="meeting.png"
-            alt="meeting image"
-            textH4="Socially Awkward"
-            textH3="At times"
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={8}>
-          <AboutTile
-            img="motorcycle.png"
-            alt="motorcycle image"
-            textH4="Love Riding"
-            textH3="Biker for life"
-          />
-        </Col>
-        <Col xs={24} sm={24} md={12} lg={8}>
-          <AboutTile
-            img="web.png"
-            alt="web image"
-            textH4="Self Taught Programmer"
-            textH3="Thanks to the Web Resources"
-            height={60}
-            width={60}
           />
         </Col>
         <Col xs={24} sm={24} md={12} lg={8}>
