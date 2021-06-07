@@ -24,7 +24,7 @@ module.exports = {
   },
   contactFormUrl:
     process.env.CONTACT_FORM_ENDPOINT ||
-    "https://getform.io/f/09a3066f-c638-40db-ad59-05e4ed71e451",
+    "https://getform.io/f/5622bb20-13a9-4932-93d5-ec747d540a6b",
   googleAnalyticTrackingId: process.env.GA_TRACKING_ID || "komsan_test_id",
   tags: {
     javascript: {

@@ -33,14 +33,14 @@ const AboutMe = () => {
           description={description}
           path=""
           keywords={[
-            "Rolwin",
-            "Reevan",
-            "Monteiro",
-            "FullStack developer",
-            "Javascript",
-            "ReactJS",
-            "NodeJS",
-            "Gatsby",
+            "Ahmed",
+            "Komsan",
+            "IOS Developer",
+            "IOS Software Engineer",
+            "Swift",
+            "Objective-c",
+            "UIKit",
+            "SwiftUI",
           ]}
         />
         <h1 className="titleSeparate">About Me</h1>
