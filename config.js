@@ -75,12 +75,6 @@ module.exports = {
         "A general purpose programming language that is widely used for developing various applications.",
       color: "#f9c646",
     },
-    swift: {
-      name: "swift",
-      description:
-        "Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS.",
-      color: "#43ace0",
-    },
     UIKit: {
       name: "UIKit",
       description:
