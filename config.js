@@ -74,6 +74,21 @@ module.exports = {
       description:
         "A general purpose programming language that is widely used for developing various applications.",
       color: "#f9c646",
+    },swift: {
+      name: "swift",
+      description:
+        "Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS.",
+      color: "#43ace0",
+    },UIKit: {
+      name: "UIKit",
+      description:
+        "UIKit framework provides the required infrastructure for your iOS or tvOS apps.",
+      color: "#43ace0",
+    },IOS: {
+      name: "IOS",
+      description:
+        "iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. It is the operating system that powers many of the company's mobile devices, including the iPhone and iPod Touch",
+      color: "#43ace0",
     },
   },
 };
