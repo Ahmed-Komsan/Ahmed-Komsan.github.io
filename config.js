@@ -13,7 +13,7 @@ module.exports = {
     blog: "blog",
     contact: "contact",
     resume: "resume",
-    tag: "tags",
+    //tag: "tags",
   },
   social: {
     github: "https://github.com/Ahmed-Komsan",
