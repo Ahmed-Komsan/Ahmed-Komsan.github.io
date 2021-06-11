@@ -7,7 +7,7 @@ module.exports = {
   postsForArchivePage: 3,
   defaultLanguage: "en",
   disqusScript:
-    process.env.DISQUS_SCRIPT || "https://rolwinreevan.disqus.com/embed.js",
+    process.env.DISQUS_SCRIPT || "https://ahmedkomsan.disqus.com/embed.js",
   pages: {
     home: "/",
     blog: "blog",
