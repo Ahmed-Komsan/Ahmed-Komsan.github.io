@@ -20,6 +20,8 @@ module.exports = {
     facebook: "https://www.facebook.com/ahmed.komsan2013",
     twitter: "https://twitter.com/ahmed_komsan12",
     instagram: "https://www.instagram.com/ahmed.komsan1/",
+    linkedin: "https://www.linkedin.com/in/ahmed-komsan",
+    stackoverflow: "https://stackoverflow.com/users/8940695",
     rss: "/rss.xml",
   },
   contactFormUrl:
