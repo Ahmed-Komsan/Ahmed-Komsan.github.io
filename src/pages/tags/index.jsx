@@ -19,22 +19,13 @@ const Tags = ({ data }) => {
     .reduce((prev, curr) => prev.concat(curr));
   rawTags.filter((tag, index) => index === rawTags.indexOf(tag)).sort(); // Remove duplicates and sort values
   // const tagPage = Config.pages.tag;
-  console.log("😳🤨🤨🤨🤨🤨🤨🤨🤨🤨 rawTags ->");
-  console.log(rawTags);
 
   const configTags = Config.tags;
-  console.log("🤕🤕🤕🤕🤕🤕🤕  configTags->");
-  console.log(configTags);
-
+  // remove tags that is not exists in the confiigration tags (config.js -> tags object )
   edges = edges.filter((edge) => {
     return edge.node.name in configTags;
   });
 
-  console.log("🤕🤕🤕🤕🤕🤕🤕  edges after filtering is ->");
-  console.log(edges);
-
-  console.log("🧤🧤🧤🧤🧤🧤🧤tagData ->");
-  console.log(configTags);
   return (
     <Layout className="outerPadding">
       <Layout className="container">
