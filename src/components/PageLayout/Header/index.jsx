@@ -69,6 +69,7 @@ export default () => {
                 Tags
               </Link>
             </li>
+            {/*
             <li className={style.navItem}>
               <Link
                 to="/contact"
@@ -78,6 +79,7 @@ export default () => {
                 Contact
               </Link>
             </li>
+            */}
             {/*
             <li className={style.navItem}>
               <Link to="/resume" onClick={toggleMenu} activeClassName={style.anchorActive}>
