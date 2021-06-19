@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://ahmed-komsan.github.io/sitemap/sitemap-index.xml
-Host: https://ahmed-komsan.github.io
+Sitemap: https://ahmedkomsan.com/sitemap/sitemap-index.xml
+Host: https://ahmedkomsan.com
