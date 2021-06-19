@@ -6,7 +6,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Ahmed Komsan","short_name":"Ahmed Komsan","start_url":"/","background_color":"#304CFD","theme_color":"#304CFD","display":"standalone","icon":"src/images/icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"6e818cc64559f7e2ef2f8c3989fe9151"},
+      options: {"plugins":[],"name":"Ahmed Komsan","short_name":"Ahmed Komsan","start_url":"/","background_color":"#304CFD","theme_color":"#304CFD","display":"standalone","icon":"src/images/icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"fb15976b65211fa6ec47f4f29c480fce"},
     },{
       plugin: require('/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[],"output":"/sitemap.xml","createLinkInHead":true},
