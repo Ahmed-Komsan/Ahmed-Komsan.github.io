@@ -48,6 +48,35 @@ function SEO({
           imageUrl || data.file.childImageSharp.fixed.src
         );
 
+        console.log("😳😳😳😳😳😳😳😳😳😳😳😳");
+        console.log("Config.siteUrl");
+        console.log(Config.siteUrl);
+      
+        console.log("title");
+        console.log(title);
+      
+        console.log("description");
+        console.log(description);
+      
+        console.log("path");
+        console.log(path);
+      
+        console.log("contentType");
+        console.log(contentType);
+      
+        console.log("metaImageUrl");
+        console.log(metaImageUrl);
+
+        console.log("pageUrl");
+        console.log(pageUrl);
+
+        console.log("metaKeywords");
+        console.log(metaKeywords);
+      
+        console.log("meta");
+        console.log(meta);
+
+
         return (
           <Helmet
             title={title} // Page title
