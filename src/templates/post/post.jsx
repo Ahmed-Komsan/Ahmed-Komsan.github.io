@@ -32,6 +32,8 @@ const Post = ({ data }) => {
           description={excerpt}
           path={path}
           keywords={['Ahmed', 'Komsan', 'IOS developer', 'IOS', 'Swift', 'Objective-c', 'technology']}
+          contentType="article"
+          imageUrl={fluid.src}
         />
         <Header />
         <SidebarWrapper>
