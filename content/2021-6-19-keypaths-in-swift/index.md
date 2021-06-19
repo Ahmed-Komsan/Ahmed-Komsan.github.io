@@ -329,7 +329,7 @@ let label = UILabel()
     .set(\.font, to: .systemFont(ofSize: 24, weight: .medium))
 ```
 
-> if you want to apply this to any `UIKit` component, just make it conform to the Builder protocol just like we did with the `UILabel` like extension `extension UIButton: Builder { }`. but if we want to use this on any NSObject or any UIKit element then we can instead make the NSObject conforms to the Builder protocol `extension NSObject: Builder { }`. 
+> Note:  if you want to apply this to any `UIKit` component, just make it conform to the Builder protocol just like we did with the `UILabel` like extension `extension UIButton: Builder { }`. but if we want to use this on any NSObject or any UIKit element then we can instead make the NSObject conforms to the Builder protocol `extension NSObject: Builder { }`. 
  
 as you can see, keypaths enable us to create many APIs with shorter syntax like creating DSL for working with layout constraints, algorithms on collections types and many other use cases.
 
