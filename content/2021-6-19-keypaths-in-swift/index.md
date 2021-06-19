@@ -312,8 +312,7 @@ here we created an `extension` to the `Sequence` type, adding a new `sorted(by k
 another example could be if we want to update a UILabel properties in a shorter syntax, we can do something like:
 
 ```swift
-extension UILabel {
-     protocol Builder {}
+protocol Builder {}
 
 extension Builder {
      func set<T>(_ keyPath:ReferenceWritableKeyPath<Self, T>,to newValue: T) -> Self {
@@ -323,7 +322,6 @@ extension Builder {
 }
 
 extension UILabel: Builder { }
-}
 
 let label = UILabel()
     .set(\.text, to: "Hello world")
