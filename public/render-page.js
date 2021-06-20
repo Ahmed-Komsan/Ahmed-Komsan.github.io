@@ -2083,12 +2083,6 @@ var plugins = [{
     "exclude": [],
     "pageTransitionDelay": 0
   }
-}, {
-  name: 'default-site-plugin',
-  plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
-  options: {
-    "plugins": []
-  }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
@@ -3487,54 +3481,6 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
-
-/***/ }),
-
-/***/ "./gatsby-ssr.js":
-/*!***********************!*\
-  !*** ./gatsby-ssr.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
-// You can delete this file if you're not using it
-const React = __webpack_require__(/*! react */ "react");
-
-const {
-  Helmet
-} = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
-
-exports.onRenderBody = ({
-  setHeadComponents,
-  setHtmlAttributes,
-  setBodyAttributes
-}, pluginOptions) => {
-  const helmet = Helmet.renderStatic();
-  setHtmlAttributes(helmet.htmlAttributes.toComponent());
-  setBodyAttributes(helmet.bodyAttributes.toComponent());
-  setHeadComponents([helmet.title.toComponent(), helmet.link.toComponent(), helmet.meta.toComponent(), helmet.noscript.toComponent(), helmet.script.toComponent(), helmet.style.toComponent()]);
-};
-
-exports.onPreRenderHTML = ({
-  getHeadComponents,
-  replaceHeadComponents
-}) => {
-  const headComponents = getHeadComponents();
-  headComponents.sort((x, y) => {
-    if (x.props && x.props["data-react-helmet"]) {
-      return -1;
-    } else if (y.props && y.props["data-react-helmet"]) {
-      return 1;
-    }
-
-    return 0;
-  });
-  replaceHeadComponents(headComponents);
-};
 
 /***/ }),
 
