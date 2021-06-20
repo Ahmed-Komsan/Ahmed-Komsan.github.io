@@ -93,13 +93,13 @@ module.exports = [
       head: false,
     },
   },
-  // {
-  //   resolve: 'gatsby-plugin-nprogress',
-  //   options: {
-  //     // Setting a color is optional.
-  //     color: 'black',
-  //     // Disable the loading spinner.
-  //     showSpinner: true,
-  //   },
-  // },
+  {
+    resolve: 'gatsby-plugin-nprogress',
+    options: {
+      // Setting a color is optional.
+      color: 'black',
+      // Disable the loading spinner.
+      showSpinner: true,
+    },
+  },
 ];
