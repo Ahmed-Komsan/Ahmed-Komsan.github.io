@@ -2083,6 +2083,12 @@ var plugins = [{
     "exclude": [],
     "pageTransitionDelay": 0
   }
+}, {
+  name: 'default-site-plugin',
+  plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
@@ -3481,6 +3487,48 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
+
+/***/ }),
+
+/***/ "./gatsby-ssr.js":
+/*!***********************!*\
+  !*** ./gatsby-ssr.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
+// You can delete this file if you're not using it
+var React = __webpack_require__(/*! react */ "react");
+
+exports.onPreRenderHTML = ({
+  getHeadComponents,
+  replaceHeadComponents
+}) => {
+  /**
+   * @type {any[]} headComponents
+   */
+  const headComponents = getHeadComponents();
+  console.log("🙄🙄🙄🙄🙄🙄🙄🙄🙄 headComponents");
+  console.log(headComponents);
+  headComponents.sort((a, b) => {
+    console.log("🙄🙄🙄🙄🙄🙄🙄🙄🙄");
+    console.log("a");
+    console.log(a);
+    console.log("b");
+    console.log(b);
+
+    if (a.props && a.props["data-react-helmet"]) {
+      return 0;
+    }
+
+    return 1;
+  });
+  replaceHeadComponents(headComponents);
+};
 
 /***/ }),
 

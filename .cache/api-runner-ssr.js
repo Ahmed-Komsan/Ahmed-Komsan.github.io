@@ -18,6 +18,10 @@ var plugins = [{
       name: 'gatsby-plugin-google-analytics',
       plugin: require('/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"komsan_test_id","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
+    },{
+      name: 'default-site-plugin',
+      plugin: require('/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
