@@ -3502,30 +3502,36 @@ function stripPrefix(str, prefix = ``) {
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 // You can delete this file if you're not using it
-var React = __webpack_require__(/*! react */ "react");
+const React = __webpack_require__(/*! react */ "react");
+
+const {
+  Helmet
+} = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
+
+exports.onRenderBody = ({
+  setHeadComponents,
+  setHtmlAttributes,
+  setBodyAttributes
+}, pluginOptions) => {
+  const helmet = Helmet.renderStatic();
+  setHtmlAttributes(helmet.htmlAttributes.toComponent());
+  setBodyAttributes(helmet.bodyAttributes.toComponent());
+  setHeadComponents([helmet.title.toComponent(), helmet.link.toComponent(), helmet.meta.toComponent(), helmet.noscript.toComponent(), helmet.script.toComponent(), helmet.style.toComponent()]);
+};
 
 exports.onPreRenderHTML = ({
   getHeadComponents,
   replaceHeadComponents
 }) => {
-  /**
-   * @type {any[]} headComponents
-   */
   const headComponents = getHeadComponents();
-  console.log("🙄🙄🙄🙄🙄🙄🙄🙄🙄 headComponents");
-  console.log(headComponents);
-  headComponents.sort((a, b) => {
-    console.log("🙄🙄🙄🙄🙄🙄🙄🙄🙄");
-    console.log("a");
-    console.log(a);
-    console.log("b");
-    console.log(b);
-
-    if (a.props && a.props["data-react-helmet"]) {
-      return 0;
+  headComponents.sort((x, y) => {
+    if (x.props && x.props["data-react-helmet"]) {
+      return -1;
+    } else if (y.props && y.props["data-react-helmet"]) {
+      return 1;
     }
 
-    return 1;
+    return 0;
   });
   replaceHeadComponents(headComponents);
 };

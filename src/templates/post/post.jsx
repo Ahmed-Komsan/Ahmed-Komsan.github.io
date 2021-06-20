@@ -25,22 +25,6 @@ const Post = ({ data }) => {
     path,
   );
 
-  console.log("🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬 data ->");
-  console.log(data);
-
-  console.log("Config.siteUrl ->");
-  console.log(Config.siteUrl);
-
-  console.log("Config.pathPrefix ->");
-  console.log(Config.pathPrefix);
-
-  console.log("path ->");
-  console.log(path);
-
-  console.log("canonicalUrl ->");
-  console.log(canonicalUrl);
-
-
   return (
     <Layout className="outerPadding">
       <Layout className="container">
