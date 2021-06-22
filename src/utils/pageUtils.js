@@ -15,7 +15,9 @@ const Utils = {
           += (resolvedUrl === '' ? '' : '/') + urlPath.replace(/^\/|\/$/g, '');
     }
 
-    resolvedUrl = resolvedUrl[0] !== '/' ? `/${resolvedUrl}` : resolvedUrl;
+    if (resolvedUrl.startsWith("http") == false) {
+      resolvedUrl = resolvedUrl[0] !== '/' ? `/${resolvedUrl}` : resolvedUrl;
+    }
     return resolvedUrl;
   }, ''),
   /**

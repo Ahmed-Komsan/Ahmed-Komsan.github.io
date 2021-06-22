@@ -4,7 +4,7 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-caches-gatsby-plugin-offline-app-shell-js": preferDefault(require("/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/.cache/caches/gatsby-plugin-offline/app-shell.js")),
+  "component---cache-dev-404-page-js": preferDefault(require("/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/.cache/dev-404-page.js")),
   "component---src-pages-404-index-jsx": preferDefault(require("/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/src/pages/404/index.jsx")),
   "component---src-pages-blog-index-jsx": preferDefault(require("/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/src/pages/blog/index.jsx")),
   "component---src-pages-contact-index-jsx": preferDefault(require("/Users/ahmedkomsan/Documents/Web Workspace/Ahmed-Komsan/src/pages/contact/index.jsx")),
