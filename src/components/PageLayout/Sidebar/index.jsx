@@ -45,7 +45,7 @@ const DomContent = () => (
           <span>
             <FeatherIcon size="19" icon="map-pin" />
           </span>{" "}
-          &nbsp; &nbsp; Cairo, Egypt
+          &nbsp; &nbsp; Austria
         </li>
         <li className={`${style.contactBlockItem}`}>
           <span style={{paddingTop:5}} >
