@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://ahmedkomsan.com/sitemap/sitemap-index.xml
-Host: https://ahmedkomsan.com

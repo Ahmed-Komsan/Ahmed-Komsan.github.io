@@ -7,7 +7,7 @@ import SEO from "../../Seo";
 
 const pageText = {
   paraOne: `👨‍💻&ensp; Hi! 👋 &nbsp;, I'm <b>Ahmed Komsan</b> an IOS Software engineer Doing mobile applications
-  development for +7 years working with different languages like C, C++,
+  development for 7 years working with different languages like C, C++,
   Objective-C, Swift and Java. following MVVM, MVVM-C, MVC methods of
   organizing code. I’m truly passionate about my work and always eager
   to learn new skills, enthusiastically grabbing onto learning any other
