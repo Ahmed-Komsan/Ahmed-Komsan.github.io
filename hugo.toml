@@ -46,10 +46,14 @@ theme = "gokarna"
   showBackToTopButton = true # true or false for "back to top" button on posts and pages
 
   socialIcons = [
-    {name = "twitter", url = "https://x.com/ahmed_komsan12"},
+    # Professional Networks
     {name = "linkedin", url = "https://www.linkedin.com/in/ahmed-komsan/"},
+    {name = "github", url = "https://github.com/Ahmed-Komsan"},
     {name = "stackoverflow", url = "https://stackoverflow.com/users/8940695/ahmed-komsan"},
+    # Social Media
+    {name = "twitter", url = "https://x.com/ahmed_komsan12"},
     {name = "instagram", url = "https://www.instagram.com/ahmed.komsan1/"},
+    # Contact
     {name = "email", url = "mailto:ahmedkomsan0@gmail.com"}
   ]
 
@@ -71,12 +75,6 @@ theme = "gokarna"
     pre = "<span data-feather='tag'></span>"
     url = "/tags/"
     weight = 3
-
-  [[menu.main]]
-    identifier = "github"
-    pre = "<span data-feather='github'></span>"
-    url = "https://github.com/Ahmed-Komsan"
-    weight = 4
 
 [markup]
   [markup.tableOfContents]
