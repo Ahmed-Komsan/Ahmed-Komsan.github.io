@@ -6,6 +6,7 @@ languageCode = "en"
 pygmentsStyle = "monokai" # syntax highlighting style
 title = 'Ahmed Komsan'
 theme = "gokarna"
+buildFuture = true
 
 
 [params]
