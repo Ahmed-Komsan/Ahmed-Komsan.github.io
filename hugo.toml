@@ -10,11 +10,12 @@ buildFuture = true
 
 
 [params]
-  avatarAltText = "avatar"
+  avatarAltText = "Portrait of Ahmed Komsan"
   avatarSize = "size-m"
   avatarURL = "/avatar.jpg"
   showPostsOnHomePage = "recent"
   enableSharing = true
+  footer = "Ahmed Komsan"
 
   # Adds KaTeX for rendering mathematical equations ($...$ for inline math, $$...$$ for block math).
   # Ensures that all math expressions inside posts are rendered properly.
@@ -42,8 +43,8 @@ buildFuture = true
     </script>
   """
 
-  description = "iOS Software Engineer | Creating delightful user experiences with Swift & SwiftUI 🌟📱"
-  metaKeywords = ["ahmedkomsan0@gmail.com", "ahmed.komsan2012@yahoo.com", "Ahmed Komsan", "blog", "IOS", "Swift", "SwiftUI", "UIKit", "Combine", "iOS development", "VR development", "Indie apps"]
+  description = "Senior iOS Engineer based in Linz, Austria, building scalable consumer apps with Swift, SwiftUI, UIKit, and modular architecture."
+  metaKeywords = ["Ahmed Komsan", "Senior iOS Engineer", "iOS development", "Swift", "Swift 6", "SwiftUI", "UIKit", "Combine", "MVVM-C", "modular architecture", "mobile engineering"]
   showBackToTopButton = true # true or false for "back to top" button on posts and pages
 
   socialIcons = [
@@ -66,16 +67,22 @@ buildFuture = true
     weight = 1
 
   [[menu.main]]
+    name = "About"
+    pre = "<span data-feather='user'></span>"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
     name = "Posts"
     pre = "<span data-feather='book'></span>"
     url = "/posts/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     name = "Tags"
     pre = "<span data-feather='tag'></span>"
     url = "/tags/"
-    weight = 3
+    weight = 4
 
 [markup]
   [markup.tableOfContents]
