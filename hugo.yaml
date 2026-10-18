@@ -1,0 +1,203 @@
+baseURL: "https://ahmedkomsan.com/"
+languageCode: "en-us"
+title: "Ahmed Komsan"
+theme: "hugo-profile"
+defaultContentLanguage: "en"
+enableEmoji: true
+enableRobotsTXT: true
+buildFuture: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - RSS
+
+pagination:
+  pagerSize: 6
+
+taxonomies:
+  tag: tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 1
+    endLevel: 4
+    ordered: false
+
+minify:
+  minifyOutput: true
+
+menus:
+  main:
+    - identifier: posts
+      name: Posts
+      title: Posts
+      url: /posts/
+      weight: 1
+
+params:
+  title: "Ahmed Komsan"
+  description: "Senior iOS Engineer based in Linz, Austria, building scalable consumer apps with Swift, SwiftUI, UIKit, and modular architecture."
+  favicon: "/favicon-512x512.png"
+  copyright: "Ahmed Komsan"
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  navbar:
+    align: ms-auto
+    showBrandLogo: false
+    brandName: "Ahmed Komsan"
+    disableSearch: false
+    searchPlaceholder: "Search"
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: true
+      disableAchievements: true
+      disableContact: false
+
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Ahmed Komsan"
+    subtitle: "Senior iOS Engineer"
+    content: "I build scalable, consumer-facing iOS apps with Swift, SwiftUI, UIKit, and modular architecture."
+    image: "/avatar.jpg"
+    roundImage: true
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "View LinkedIn"
+      url: "https://www.linkedin.com/in/ahmed-komsan/"
+      download: false
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: "fab fa-github"
+          url: "https://github.com/Ahmed-Komsan"
+        - icon: "fab fa-linkedin"
+          url: "https://www.linkedin.com/in/ahmed-komsan/"
+        - icon: "fab fa-stack-overflow"
+          url: "https://stackoverflow.com/users/8940695/ahmed-komsan"
+        - icon: "fab fa-x-twitter"
+          url: "https://x.com/ahmed_komsan12"
+        - icon: "fab fa-instagram"
+          url: "https://www.instagram.com/ahmed.komsan1/"
+        - icon: "fas fa-envelope"
+          url: "mailto:ahmedkomsan0@gmail.com"
+
+  about:
+    enable: true
+    title: "About Me"
+    image: "/avatar.jpg"
+    content: |-
+      I am a Senior iOS Engineer based in Linz, Austria, with more than eight years of experience building and scaling consumer-facing applications. I work at Tractive, collaborating with a cross-functional team to deliver reliable product experiences for pet owners.
+
+      My work focuses on modern iOS development, scalable architecture, code quality, automated testing, performance, and application security across pet technology, fintech, telehealth, and consumer applications.
+    skills:
+      enable: true
+      title: "Technologies and practices I work with:"
+      items:
+        - "Swift 6"
+        - "SwiftUI"
+        - "UIKit"
+        - "Combine"
+        - "Objective-C"
+        - "MVVM-C"
+        - "Modular Architecture"
+        - "Automated Testing"
+        - "iOS Application Security"
+
+  experience:
+    enable: true
+    items:
+      - company: "Tractive"
+        companyUrl: "https://tractive.com/"
+        jobs:
+          - name: "Senior iOS Developer"
+            date: "Dec 2021 - Present"
+            content: "Build and evolve a large consumer iOS app using Swift 6, SwiftUI, Combine, and UIKit. Helped move the codebase from MVVM-C toward modular architecture while strengthening automated and screenshot testing, performance, and application security."
+      - company: "Efreshli"
+        companyUrl: "https://efreshli.com/"
+        jobs:
+          - name: "Senior iOS Developer"
+            date: "Apr 2021 - Nov 2021"
+            content: "Built core application foundations with reusable networking and persistence layers, offline-first Realm storage, theme and dark-mode support, and MVVM-C architecture."
+      - company: "Fawry"
+        companyUrl: "https://www.fawry.com/"
+        jobs:
+          - name: "Senior iOS Developer"
+            date: "Sep 2020 - Mar 2021"
+            content: "Developed and maintained Swift and Objective-C features for consumer mobile payments and digital-wallet experiences, with a focus on reliability and maintainable code."
+
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "Bachelor’s Degree in Computer Science"
+        school:
+          name: "Cairo University"
+        date: "2012 - 2015"
+
+  projects:
+    enable: false
+
+  achievements:
+    enable: false
+
+  contact:
+    enable: true
+    content: "My inbox is open for conversations about iOS engineering, architecture, and potential collaborations."
+    btnName: "Email me"
+    btnLink: "mailto:ahmedkomsan0@gmail.com"
+
+  footer:
+    recentPosts:
+      path: "posts"
+      count: 3
+      title: "Recent Posts"
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: "https://github.com/Ahmed-Komsan"
+      linkedin: "https://www.linkedin.com/in/ahmed-komsan/"
+      twitter: "https://x.com/ahmed_komsan12"
+      instagram: "https://www.instagram.com/ahmed.komsan1/"
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: false
+
+  terms:
+    read: "Read"
+    toc: "Table of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

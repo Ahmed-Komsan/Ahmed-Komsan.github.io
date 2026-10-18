@@ -1,11 +1,12 @@
 +++
 title = 'About'
 description = 'About Ahmed Komsan, a Senior iOS Engineer based in Linz, Austria.'
+tags = []
 +++
 
 I am a Senior iOS Engineer based in Linz, Austria, with more than eight years of experience building and scaling consumer-facing applications. I currently work at Tractive, collaborating with a cross-functional team to deliver reliable product experiences for pet owners.
 
-My recent work includes leading the migration from UIKit to SwiftUI, Combine, and Swift 6, and helping evolve an MVVM-C codebase into a modular architecture. I also focus on automated testing, screenshot testing, code quality, performance, and application security.
+My recent work includes migrating UIKit features to SwiftUI, Combine, and Swift 6, and helping evolve an MVVM-C codebase into a modular architecture. I also focus on automated testing, screenshot testing, code quality, performance, and application security.
 
 ## Technical focus
 

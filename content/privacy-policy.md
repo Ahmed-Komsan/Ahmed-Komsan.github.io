@@ -2,6 +2,7 @@
 date = '2025-04-05T01:18:38+02:00'
 draft = false
 title = 'Privacy Policy'
+tags = []
 +++
 
 ## Privacy Policy for SpeakHero
