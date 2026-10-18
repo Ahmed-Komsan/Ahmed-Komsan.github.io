@@ -50,6 +50,7 @@ params:
   useBootstrapCDN: false
   mathjax: false
   animate: true
+  customCSS: true
 
   navbar:
     align: ms-auto
@@ -143,6 +144,18 @@ params:
           - name: "Senior iOS Developer"
             date: "Sep 2020 - Mar 2021"
             content: "Developed and maintained Swift and Objective-C features for consumer mobile payments and digital-wallet experiences, with a focus on reliability and maintainable code."
+      - company: "TruDoc 24x7"
+        companyUrl: "https://trudocgroup.com/"
+        jobs:
+          - name: "iOS Developer"
+            date: "Sep 2018 - Aug 2020"
+            content: "Modernized telehealth apps by refactoring Objective-C and MVC code to Swift and MVVM, introduced Fastlane and CircleCI delivery, strengthened application security, and integrated video calling and Bluetooth-connected medical devices."
+      - company: "BlaBlaConnect"
+        companyUrl: "https://www.blablaconnect.com/"
+        jobs:
+          - name: "iOS Developer"
+            date: "Dec 2016 - Aug 2018"
+            content: "Developed chat, VoIP, and money-transfer features across Objective-C and Swift, integrating XMPP, RabbitMQ, WebRTC, CallKit, PGP end-to-end encryption, and MangoPay."
 
   education:
     enable: true
@@ -152,6 +165,10 @@ params:
         school:
           name: "Cairo University"
         date: "2012 - 2015"
+        GPA: "3.08 / 4"
+        content: |-
+          - **Major:** Information Technology
+          - **Minor:** Computer Science
 
   projects:
     enable: false

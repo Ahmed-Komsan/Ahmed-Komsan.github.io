@@ -2,6 +2,7 @@
 title: "Swift - Powerful Yet Overlooked Functions for problem solving -- Part 1"
 date: 2025-03-30
 description: 'Discover lesser-known Swift functions that simplify iteration, filtering, and validation for cleaner and more efficient code.'
+image: "hidden-gems-swift.webp"
 tags: ["Swift", "IOS", "Problem-Solving"]
 type: post
 weight: 20

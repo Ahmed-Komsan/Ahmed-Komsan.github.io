@@ -1,0 +1,11 @@
+/* Keep the education card legible when Hugo Profile switches themes. */
+#education .card,
+#education .card * {
+  color: var(--text-color) !important;
+}
+
+html.dark #education .card,
+html.dark #education .card * {
+  background-color: var(--secondary-color-dark) !important;
+  color: var(--text-color-dark) !important;
+}
