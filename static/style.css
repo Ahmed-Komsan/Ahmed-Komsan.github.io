@@ -49,3 +49,13 @@ html.dark #education .card * {
     flex-direction: column;
   }
 }
+
+/* Keep wide code and ASCII diagrams from expanding article columns on mobile. */
+#single .row > [class*="col-"] {
+  min-width: 0;
+}
+
+#single .page-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
