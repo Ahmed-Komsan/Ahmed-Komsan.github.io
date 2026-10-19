@@ -2,7 +2,7 @@
 title: "Getting Started with Diffable Data Source"
 date: 2020-07-17
 description: "Diffable Data Source is a new declarative API for UITableView and its counterpart UICollectionView introduced at WWDC19, IOS 13 as a replacement for UITableViewDataSource and UICollectionViewDataSource."
-image: "diffable1.png"
+image: "/posts/2020-7-17-getting-started-with-diffable-data-source/diffable1.png"
 type: "post"
 tags: ["Swift", "UIKit", "IOS"]
 weight: 20

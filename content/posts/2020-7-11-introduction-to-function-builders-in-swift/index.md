@@ -2,7 +2,7 @@
 title: "Introduction to Function Builders in Swift"
 date: 2020-07-11
 description: "Function builders is a swift language feature, first introduced in swift 5.1 available from Xcode 11. it helps in building declarative DSL ( Domain Specific Language ) for constructing user interface hierarchies."
-image: "function_builders.jpeg"
+image: "/posts/2020-7-11-introduction-to-function-builders-in-swift/function_builders.jpeg"
 type: "post"
 tags: ["Swift", "UIKit", "IOS"]
 weight: 20

@@ -2,7 +2,7 @@
 title: "KeyPaths in swift"
 date: 2021-06-22
 description: 'KeyPaths are great and type safe as compared to the old \#keyPath(), allow us to create a generic algorithms and APIs that are shorter and cleaner. keypaths are also used in SwiftUI and Combine framework in several places to keep the API concise'
-image: "keypaths_swift.png"
+image: "/posts/2021-6-22-keypaths-in-swift/keypaths_swift.png"
 tags: ["Swift", "IOS"]
 type: post
 weight: 20
