@@ -5,7 +5,9 @@
 <meta name="theme-color" content="#0b1f33">
 <script>
   (() => {
-    const cleanupKey = "legacy-gatsby-cache-cleanup-v1";
+    // TODO(2027-04-19): Remove this one-time cleanup after the six-month
+    // migration window, provided returning visitors no longer report stale pages.
+    const cleanupKey = "legacy-site-cache-cleanup-v1";
 
     try {
       if (localStorage.getItem(cleanupKey)) return;
