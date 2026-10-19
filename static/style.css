@@ -9,3 +9,43 @@ html.dark #education .card * {
   background-color: var(--secondary-color-dark) !important;
   color: var(--text-color-dark) !important;
 }
+
+/* Keep the employer tabs tidy and the role details easy to scan. */
+#experience .experience-container .nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  gap: 0.25rem;
+  padding-bottom: 0.35rem;
+}
+
+#experience .experience-container .nav-item {
+  min-width: 0;
+  text-align: center;
+}
+
+#experience .experience-container .nav-link {
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+}
+
+#experience .experience-container .tab-pane > div > .d-flex {
+  align-items: flex-start !important;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+#experience .experience-container .tab-pane ul {
+  padding-left: 0;
+  padding-top: 0.75rem;
+}
+
+#experience .experience-container .tab-pane ul li {
+  line-height: 1.55;
+  margin-bottom: 0.65rem;
+}
+
+@media (max-width: 575.98px) {
+  #experience .experience-container .tab-pane > div > .d-flex {
+    flex-direction: column;
+  }
+}

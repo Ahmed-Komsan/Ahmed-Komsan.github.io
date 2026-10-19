@@ -45,8 +45,10 @@ menus:
 params:
   title: "Ahmed Komsan"
   description: "Senior iOS Engineer based in Linz, Austria, building scalable consumer apps with Swift, SwiftUI, UIKit, and modular architecture."
-  favicon: "/favicon-512x512.png"
+  favicon: "/favicon.svg"
   copyright: "Ahmed Komsan"
+  terms:
+    copyright: "All rights reserved"
   useBootstrapCDN: false
   mathjax: false
   animate: true
@@ -131,31 +133,46 @@ params:
         jobs:
           - name: "Senior iOS Developer"
             date: "Dec 2021 - Present"
-            content: "Build and evolve a large consumer iOS app using Swift 6, SwiftUI, Combine, and UIKit. Helped move the codebase from MVVM-C toward modular architecture while strengthening automated and screenshot testing, performance, and application security."
+            content: |-
+              - Build and evolve a large consumer iOS app with Swift 6, SwiftUI, Combine, and UIKit.
+              - Helped transition the codebase from MVVM-C toward modular architecture.
+              - Strengthen automated and screenshot testing, performance, and application security.
       - company: "Efreshli"
         companyUrl: "https://efreshli.com/"
         jobs:
           - name: "Senior iOS Developer"
             date: "Apr 2021 - Nov 2021"
-            content: "Built core application foundations with reusable networking and persistence layers, offline-first Realm storage, theme and dark-mode support, and MVVM-C architecture."
+            content: |-
+              - Built reusable networking and persistence foundations.
+              - Implemented offline-first storage with Realm.
+              - Delivered theme and dark-mode support using MVVM-C architecture.
       - company: "Fawry"
         companyUrl: "https://www.fawry.com/"
         jobs:
           - name: "Senior iOS Developer"
             date: "Sep 2020 - Mar 2021"
-            content: "Developed and maintained Swift and Objective-C features for consumer mobile payments and digital-wallet experiences, with a focus on reliability and maintainable code."
+            content: |-
+              - Developed consumer mobile-payment and digital-wallet features.
+              - Maintained a mixed Swift and Objective-C codebase.
+              - Focused on reliable behavior and maintainable implementation.
       - company: "TruDoc 24x7"
         companyUrl: "https://trudocgroup.com/"
         jobs:
           - name: "iOS Developer"
             date: "Sep 2018 - Aug 2020"
-            content: "Modernized telehealth apps by refactoring Objective-C and MVC code to Swift and MVVM, introduced Fastlane and CircleCI delivery, strengthened application security, and integrated video calling and Bluetooth-connected medical devices."
+            content: |-
+              - Refactored Objective-C and MVC code to Swift and MVVM.
+              - Introduced delivery automation with Fastlane and CircleCI.
+              - Strengthened security and integrated video calling and Bluetooth-connected medical devices.
       - company: "BlaBlaConnect"
         companyUrl: "https://www.blablaconnect.com/"
         jobs:
           - name: "iOS Developer"
             date: "Dec 2016 - Aug 2018"
-            content: "Developed chat, VoIP, and money-transfer features across Objective-C and Swift, integrating XMPP, RabbitMQ, WebRTC, CallKit, PGP end-to-end encryption, and MangoPay."
+            content: |-
+              - Developed chat, VoIP, and money-transfer features in Objective-C and Swift.
+              - Integrated XMPP, RabbitMQ, WebRTC, and CallKit.
+              - Added PGP end-to-end encryption and MangoPay payment support.
 
   education:
     enable: true
