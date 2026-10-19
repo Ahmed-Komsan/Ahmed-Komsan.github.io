@@ -1,5 +1,5 @@
 baseURL: "https://ahmedkomsan.com/"
-languageCode: "en-us"
+locale: "en-US"
 title: "Ahmed Komsan"
 theme: "hugo-profile"
 defaultContentLanguage: "en"
@@ -47,8 +47,6 @@ params:
   description: "Senior iOS Engineer based in Linz, Austria, building scalable consumer apps with Swift, SwiftUI, UIKit, and modular architecture."
   favicon: "/favicon.svg"
   copyright: "Ahmed Komsan"
-  terms:
-    copyright: "All rights reserved"
   useBootstrapCDN: false
   mathjax: false
   animate: true
