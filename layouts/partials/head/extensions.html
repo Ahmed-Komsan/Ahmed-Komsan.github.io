@@ -3,3 +3,40 @@
 <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <meta name="theme-color" content="#0b1f33">
+<script>
+  (() => {
+    const cleanupKey = "legacy-gatsby-cache-cleanup-v1";
+
+    try {
+      if (localStorage.getItem(cleanupKey)) return;
+    } catch (_) {
+      // Storage can be unavailable in private or restricted browsing modes.
+    }
+
+    window.addEventListener("load", async () => {
+      try {
+        if ("serviceWorker" in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(
+            registrations.map((registration) => registration.unregister()),
+          );
+        }
+
+        if ("caches" in window) {
+          const cacheNames = await caches.keys();
+          await Promise.all(
+            cacheNames.map((cacheName) => caches.delete(cacheName)),
+          );
+        }
+
+        try {
+          localStorage.setItem(cleanupKey, "done");
+        } catch (_) {
+          // Cleanup still succeeded even when local storage is unavailable.
+        }
+      } catch (error) {
+        console.warn("Legacy site cache cleanup failed", error);
+      }
+    }, { once: true });
+  })();
+</script>
