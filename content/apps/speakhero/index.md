@@ -1,5 +1,5 @@
 +++
-title = 'SpeakHero — Language Learning'
+title = 'SpeakHero, Language Learning'
 description = 'Build practical vocabulary, improve your pronunciation, read, listen, translate, and track your progress with SpeakHero.'
 type = 'speakhero'
 draft = false
