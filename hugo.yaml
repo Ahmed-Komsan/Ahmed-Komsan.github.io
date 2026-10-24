@@ -36,11 +36,16 @@ minify:
 
 menus:
   main:
+    - identifier: speakhero
+      name: SpeakHero
+      title: SpeakHero language learning app
+      url: /apps/speakhero/
+      weight: 1
     - identifier: posts
       name: Posts
       title: Posts
       url: /posts/
-      weight: 1
+      weight: 2
 
 params:
   title: "Ahmed Komsan"

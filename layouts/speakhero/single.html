@@ -1,0 +1,336 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Params.description }}">
+<meta name="theme-color" content="#ebe8ff">
+<meta property="og:type" content="website">
+<script>document.documentElement.classList.add("sh-js");</script>
+{{ $styles := resources.Get "css/speakhero.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SpeakHero — Language Learning",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "iOS, iPadOS",
+  "description": "Build practical vocabulary, improve pronunciation, read, listen, translate, and track learning progress in one focused app.",
+  "url": "{{ .Permalink }}",
+  "downloadUrl": "https://apps.apple.com/app/id6744280195",
+  "image": "{{ "/apps/speakhero/images/speakhero-og.jpg" | absURL }}",
+  "author": {
+    "@type": "Person",
+    "name": "Ahmed Komsan"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+{{ end }}
+
+{{ define "title" }}SpeakHero — One app. Every language skill.{{ end }}
+
+{{ define "main" }}
+<main id="speakhero" class="sh-page">
+  <section class="sh-hero" aria-labelledby="speakhero-title">
+    <div class="sh-orb sh-orb-one" aria-hidden="true"></div>
+    <div class="sh-orb sh-orb-two" aria-hidden="true"></div>
+    <span class="sh-word sh-word-hallo" aria-hidden="true">hallo</span>
+    <span class="sh-word sh-word-marhaba" aria-hidden="true">مرحبا</span>
+    <span class="sh-word sh-word-hello" aria-hidden="true">hello</span>
+
+    <div class="sh-shell sh-hero-grid">
+      <div class="sh-hero-copy" data-reveal>
+        <a class="sh-brand" href="#speakhero-story" aria-label="Explore SpeakHero">
+          <img
+            src="{{ "/apps/speakhero/images/app-icon-128.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/app-icon-128.webp" | relURL }} 128w, {{ "/apps/speakhero/images/app-icon-256.webp" | relURL }} 256w"
+            width="64"
+            height="64"
+            alt="SpeakHero app icon"
+          >
+          <span>SpeakHero</span>
+        </a>
+        <p class="sh-eyebrow">Language learning, without the clutter</p>
+        <h1 id="speakhero-title">One app.<br><span>Every language skill.</span></h1>
+        <p class="sh-lead">Build practical vocabulary, improve your pronunciation, read, listen, translate, and track your progress—all in one focused learning experience.</p>
+        <div class="sh-hero-actions">
+          <a class="sh-store-button" href="https://apps.apple.com/app/id6744280195" target="_blank" rel="noopener noreferrer" aria-label="Download SpeakHero on the App Store">
+            <i class="fab fa-apple" aria-hidden="true"></i>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+          <a class="sh-text-link" href="#speakhero-story">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="sh-availability"><span aria-hidden="true"></span> Available for iPhone and iPad</p>
+      </div>
+
+      <div class="sh-hero-visual" data-parallax data-reveal aria-label="SpeakHero vocabulary, translation, and reading screens">
+        <div class="sh-phone sh-phone-back-left" aria-hidden="true">
+          <img
+            src="{{ "/apps/speakhero/images/lesson-catalog-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/lesson-catalog-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/lesson-catalog-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/lesson-catalog-960.webp" | relURL }} 960w"
+            sizes="(max-width: 700px) 34vw, 250px"
+            width="720"
+            height="1561"
+            alt=""
+            fetchpriority="high"
+          >
+        </div>
+        <div class="sh-phone sh-phone-center">
+          <img
+            src="{{ "/apps/speakhero/images/translate-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/translate-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/translate-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/translate-960.webp" | relURL }} 960w"
+            sizes="(max-width: 700px) 40vw, 290px"
+            width="720"
+            height="1561"
+            alt="SpeakHero translation screen translating spoken Japanese into French"
+            fetchpriority="high"
+          >
+        </div>
+        <div class="sh-phone sh-phone-back-right" aria-hidden="true">
+          <img
+            src="{{ "/apps/speakhero/images/article-details-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/article-details-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/article-details-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/article-details-960.webp" | relURL }} 960w"
+            sizes="(max-width: 700px) 34vw, 250px"
+            width="720"
+            height="1561"
+            alt=""
+            fetchpriority="high"
+          >
+        </div>
+        <div class="sh-hero-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sh-proof" aria-label="SpeakHero highlights">
+    <div class="sh-shell sh-proof-grid" data-reveal>
+      <div><strong>3 languages</strong><span>German · Arabic · English</span></div>
+      <div><strong>70+ topics</strong><span>Built around everyday life</span></div>
+      <div><strong>One learning loop</strong><span>Learn · Practice · Use</span></div>
+      <div><strong>Learn anywhere</strong><span>Downloadable resources</span></div>
+    </div>
+  </section>
+
+  <section id="speakhero-story" class="sh-section sh-learning">
+    <div class="sh-shell">
+      <div class="sh-section-heading" data-reveal>
+        <p class="sh-kicker">A focused way forward</p>
+        <h2>Turn useful words into<br><span>real confidence.</span></h2>
+        <p>SpeakHero brings the essential parts of language learning into one clear rhythm, so every session moves you closer to using the language.</p>
+      </div>
+
+      <div class="sh-learning-grid">
+        <article class="sh-feature-card sh-card-vocabulary" data-reveal>
+          <div class="sh-card-copy">
+            <span class="sh-card-number">01</span>
+            <p class="sh-kicker">Build your vocabulary</p>
+            <h3>Start with words that matter.</h3>
+            <p>Explore practical topics for travel, work, food, health, shopping, and everyday conversations.</p>
+          </div>
+          <div class="sh-card-phone">
+            <div class="sh-phone sh-phone-static">
+              <img
+                src="{{ "/apps/speakhero/images/lesson-catalog-720.webp" | relURL }}"
+                srcset="{{ "/apps/speakhero/images/lesson-catalog-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/lesson-catalog-720.webp" | relURL }} 720w"
+                sizes="(max-width: 700px) 62vw, 310px"
+                width="720"
+                height="1561"
+                loading="lazy"
+                alt="Vocabulary lessons organized by practical real-life topics"
+              >
+            </div>
+          </div>
+        </article>
+
+        <div class="sh-practice-grid">
+          <article class="sh-practice-card" data-reveal>
+            <div>
+              <span class="sh-card-number">02</span>
+              <h3>Remember it.</h3>
+              <p>Flashcards connect meaning, examples, grammar, and synonyms.</p>
+            </div>
+            <div class="sh-mini-phone">
+              <img
+                src="{{ "/apps/speakhero/images/flashcards-480.webp" | relURL }}"
+                srcset="{{ "/apps/speakhero/images/flashcards-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/flashcards-720.webp" | relURL }} 720w"
+                sizes="220px"
+                width="480"
+                height="1041"
+                loading="lazy"
+                alt="SpeakHero vocabulary flashcard"
+              >
+            </div>
+          </article>
+          <article class="sh-practice-card sh-practice-dark" data-reveal>
+            <div>
+              <span class="sh-card-number">03</span>
+              <h3>Hear it.</h3>
+              <p>Adjust the voice and use hands-free playback to keep learning.</p>
+            </div>
+            <div class="sh-mini-phone">
+              <img
+                src="{{ "/apps/speakhero/images/hands-free-480.webp" | relURL }}"
+                srcset="{{ "/apps/speakhero/images/hands-free-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/hands-free-720.webp" | relURL }} 720w"
+                sizes="220px"
+                width="480"
+                height="1041"
+                loading="lazy"
+                alt="Hands-free vocabulary playback controls"
+              >
+            </div>
+          </article>
+          <article class="sh-practice-card sh-practice-cyan" data-reveal>
+            <div>
+              <span class="sh-card-number">04</span>
+              <h3>Make it stick.</h3>
+              <p>Quick quizzes offer clear feedback and reinforce each lesson.</p>
+            </div>
+            <div class="sh-mini-phone">
+              <img
+                src="{{ "/apps/speakhero/images/quiz-480.webp" | relURL }}"
+                srcset="{{ "/apps/speakhero/images/quiz-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/quiz-720.webp" | relURL }} 720w"
+                sizes="220px"
+                width="480"
+                height="1041"
+                loading="lazy"
+                alt="A SpeakHero vocabulary quiz with multiple-choice answers"
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sh-section sh-reading">
+    <div class="sh-shell sh-reading-grid">
+      <div class="sh-reading-copy" data-reveal>
+        <p class="sh-kicker">Read and listen</p>
+        <h2>Meet the language<br>in context.</h2>
+        <p>Read level-appropriate stories, listen with guided controls, and follow along paragraph by paragraph.</p>
+        <ul class="sh-check-list">
+          <li><span aria-hidden="true">✓</span> Stories organized by topic and difficulty</li>
+          <li><span aria-hidden="true">✓</span> Guided audio at your pace</li>
+          <li><span aria-hidden="true">✓</span> Practice with language in context</li>
+        </ul>
+      </div>
+      <div class="sh-tablet-wrap" data-reveal>
+        <div class="sh-tablet">
+          <img
+            src="{{ "/apps/speakhero/images/reading-ipad-1080.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/reading-ipad-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/reading-ipad-1080.webp" | relURL }} 1080w, {{ "/apps/speakhero/images/reading-ipad-1440.webp" | relURL }} 1440w"
+            sizes="(max-width: 900px) 94vw, 650px"
+            width="1080"
+            height="810"
+            loading="lazy"
+            alt="SpeakHero reading library on iPad"
+          >
+        </div>
+        <div class="sh-phone sh-reading-phone">
+          <img
+            src="{{ "/apps/speakhero/images/article-details-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/article-details-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/article-details-720.webp" | relURL }} 720w"
+            sizes="220px"
+            width="720"
+            height="1561"
+            loading="lazy"
+            alt="Guided story playback on iPhone"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sh-section sh-translate-section">
+    <div class="sh-shell sh-translate-grid">
+      <div class="sh-translate-visual" data-reveal>
+        <span class="sh-translation-token sh-token-one" aria-hidden="true">Wo ist der Bahnhof?</span>
+        <span class="sh-translation-token sh-token-two" aria-hidden="true">أين المحطة؟</span>
+        <span class="sh-translation-token sh-token-three" aria-hidden="true">Where is the station?</span>
+        <div class="sh-phone sh-translate-phone">
+          <img
+            src="{{ "/apps/speakhero/images/translate-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/translate-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/translate-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/translate-960.webp" | relURL }} 960w"
+            sizes="(max-width: 700px) 64vw, 330px"
+            width="720"
+            height="1561"
+            loading="lazy"
+            alt="SpeakHero translating Japanese text into French"
+          >
+        </div>
+      </div>
+      <div class="sh-translate-copy" data-reveal>
+        <p class="sh-kicker">Understand instantly</p>
+        <h2>Type it.<br>Say it.<br><span>Hear it.</span></h2>
+        <p>Translate by typing or speaking, then listen to the result, copy it, or share it when you need it.</p>
+        <div class="sh-language-pills" aria-label="Supported languages">
+          <span>English</span><span>Deutsch</span><span>العربية</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sh-section sh-progress-section">
+    <div class="sh-shell sh-progress-grid">
+      <div class="sh-progress-copy" data-reveal>
+        <p class="sh-kicker">Keep your momentum</p>
+        <h2>See every step<br><span>add up.</span></h2>
+        <p>Follow your lessons, study time, streaks, and achievements—then return to the next useful thing to learn.</p>
+        <div class="sh-progress-points">
+          <div><strong>Clear</strong><span>Your learning activity at a glance</span></div>
+          <div><strong>Personal</strong><span>Progress that reflects your practice</span></div>
+          <div><strong>Motivating</strong><span>Milestones worth coming back for</span></div>
+        </div>
+      </div>
+      <div class="sh-progress-visual" data-reveal>
+        <div class="sh-progress-ring sh-ring-one" aria-hidden="true"></div>
+        <div class="sh-progress-ring sh-ring-two" aria-hidden="true"></div>
+        <div class="sh-phone sh-progress-phone">
+          <img
+            src="{{ "/apps/speakhero/images/progress-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/progress-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/progress-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/progress-960.webp" | relURL }} 960w"
+            sizes="(max-width: 700px) 64vw, 330px"
+            width="720"
+            height="1561"
+            loading="lazy"
+            alt="SpeakHero progress dashboard showing learning statistics and achievements"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sh-cta">
+    <div class="sh-shell sh-cta-card" data-reveal>
+      <img
+        class="sh-mascot"
+        src="{{ "/apps/speakhero/images/mascot-360.webp" | relURL }}"
+        srcset="{{ "/apps/speakhero/images/mascot-360.webp" | relURL }} 360w, {{ "/apps/speakhero/images/mascot-640.webp" | relURL }} 640w"
+        sizes="(max-width: 700px) 180px, 260px"
+        width="360"
+        height="318"
+        loading="lazy"
+        alt="SpeakHero character waving"
+      >
+      <div class="sh-cta-copy">
+        <p class="sh-kicker">Your language coach. Always ready.</p>
+        <h2>Ready to make<br>your next word count?</h2>
+        <a class="sh-store-button sh-store-button-light" href="https://apps.apple.com/app/id6744280195" target="_blank" rel="noopener noreferrer" aria-label="Download SpeakHero on the App Store">
+          <i class="fab fa-apple" aria-hidden="true"></i>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <div class="sh-legal-links">
+          <a href="{{ "/privacy-policy/" | relURL }}">Privacy Policy</a>
+          <a href="{{ "/support/" | relURL }}">Support</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{ $script := resources.Get "js/speakhero.js" | minify | fingerprint }}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ end }}
