@@ -114,6 +114,8 @@ params:
       I am a Senior iOS Engineer based in Linz, Austria, with more than eight years of experience building and scaling consumer-facing applications. I work at Tractive, collaborating with a cross-functional team to deliver reliable product experiences for pet owners.
 
       My work focuses on modern iOS development, scalable architecture, code quality, automated testing, performance, and application security across pet technology, fintech, telehealth, and consumer applications.
+
+      In my free time, I maintain [SpeakHero](/apps/speakhero/), a language-learning app I built for focused, practical learning and as a space to experiment with new ideas in iOS development.
     skills:
       enable: true
       title: "Technologies and practices I work with:"
