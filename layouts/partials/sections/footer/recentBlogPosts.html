@@ -4,7 +4,8 @@
 {{ if $postsSection }}
   {{ $allSectionPosts = $postsSection.RegularPages.ByDate.Reverse }}
 {{ end }}
-{{ if and (gt (len $allSectionPosts) 0) (.Site.Params.footer.recentPosts.enable | default false) }}
+{{ $hideRecentPosts := .Params.hideRecentPosts | default false }}
+{{ if and (not $hideRecentPosts) (gt (len $allSectionPosts) 0) (.Site.Params.footer.recentPosts.enable | default false) }}
 <div class="container py-3" id="recent-posts">
   {{ $recentPostsCount := .Site.Params.footer.recentPosts.count | default 3 }}
   <div class="h3 text-center text-secondary py-3">

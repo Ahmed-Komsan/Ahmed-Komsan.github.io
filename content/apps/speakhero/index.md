@@ -5,6 +5,7 @@ type = 'speakhero'
 draft = false
 toc = false
 socialShare = false
+hideRecentPosts = true
 image = '/apps/speakhero/images/speakhero-og.jpg'
 images = ['/apps/speakhero/images/speakhero-og.jpg']
 +++
