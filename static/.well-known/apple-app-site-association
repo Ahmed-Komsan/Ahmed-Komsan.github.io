@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "Y224ZZ6DXL.com.komsan.SpeakHero"
+        ],
+        "components": [
+          {
+            "/": "/apps/speakhero/*"
+          }
+        ]
+      }
+    ]
+  }
+}
