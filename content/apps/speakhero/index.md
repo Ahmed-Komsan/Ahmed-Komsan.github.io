@@ -8,4 +8,11 @@ socialShare = false
 hideRecentPosts = true
 image = '/apps/speakhero/images/speakhero-og.jpg'
 images = ['/apps/speakhero/images/speakhero-og.jpg']
+aliases = [
+  '/apps/speakhero/vocabulary/',
+  '/apps/speakhero/reading/',
+  '/apps/speakhero/translate/',
+  '/apps/speakhero/progress/',
+  '/apps/speakhero/settings/'
+]
 +++
