@@ -115,6 +115,7 @@
 
 .sh-hero h1 span,
 .sh-section-heading h2 span,
+.sh-duo-copy h2 span,
 .sh-progress-copy h2 span,
 .sh-translate-copy h2 span {
   color: var(--sh-indigo);
@@ -402,6 +403,7 @@
 
 .sh-section-heading h2,
 .sh-reading-copy h2,
+.sh-duo-copy h2,
 .sh-translate-copy h2,
 .sh-progress-copy h2,
 .sh-cta-copy h2 {
@@ -415,6 +417,7 @@
 
 .sh-section-heading > p:last-child,
 .sh-reading-copy > p,
+.sh-duo-copy > p,
 .sh-translate-copy > p,
 .sh-progress-copy > p {
   color: var(--sh-muted);
@@ -643,6 +646,150 @@
   transform: rotate(5deg);
   width: 220px;
   z-index: 2;
+}
+
+.sh-duo-section {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(142, 235, 255, 0.48), transparent 25%),
+    radial-gradient(circle at 8% 86%, rgba(101, 88, 245, 0.16), transparent 26%),
+    linear-gradient(140deg, #f9f8ff 0%, #ece9ff 52%, #e5f7ff 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.sh-duo-section::before {
+  background-image: radial-gradient(rgba(101, 88, 245, 0.2) 0.8px, transparent 0.8px);
+  background-size: 20px 20px;
+  content: "";
+  inset: 0;
+  mask-image: linear-gradient(100deg, black, transparent 44%);
+  opacity: 0.32;
+  pointer-events: none;
+  position: absolute;
+}
+
+.sh-duo-grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 0.72fr) minmax(560px, 1.28fr);
+}
+
+.sh-duo-copy {
+  position: relative;
+  z-index: 4;
+}
+
+.sh-duo-points {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 2.2rem;
+}
+
+.sh-duo-points > div {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(101, 88, 245, 0.13);
+  border-radius: 18px;
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 38px 1fr;
+  padding: 0.85rem 1rem;
+}
+
+.sh-duo-points > div > span {
+  align-items: center;
+  background: var(--sh-indigo);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 780;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  width: 34px;
+}
+
+.sh-duo-points p {
+  color: var(--sh-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.sh-duo-points strong {
+  color: var(--sh-ink);
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 0.08rem;
+}
+
+.sh-duo-visual {
+  min-height: 700px;
+  position: relative;
+}
+
+.sh-duo-visual::before,
+.sh-duo-visual::after {
+  border: 1px solid rgba(101, 88, 245, 0.18);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+.sh-duo-visual::before {
+  height: 540px;
+  right: -160px;
+  top: 35px;
+  width: 540px;
+}
+
+.sh-duo-visual::after {
+  height: 380px;
+  right: -80px;
+  top: 115px;
+  width: 380px;
+}
+
+.sh-duo-card {
+  background: #f1efff;
+  border: 1px solid rgba(20, 36, 85, 0.1);
+  border-radius: clamp(18px, 2.4vw, 32px);
+  box-shadow: 0 25px 60px rgba(41, 35, 129, 0.2);
+  overflow: hidden;
+  position: absolute;
+}
+
+.sh-duo-card img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.sh-duo-card-quiz {
+  right: 0;
+  top: 0;
+  transform: rotate(1.5deg);
+  width: 90%;
+  z-index: 1;
+}
+
+.sh-duo-card-reading {
+  bottom: 0;
+  right: -2%;
+  transform: rotate(2.5deg);
+  width: 70%;
+  z-index: 2;
+}
+
+.sh-duo-card-flashcards {
+  bottom: 2%;
+  left: -2%;
+  transform: rotate(-3deg);
+  width: 36%;
+  z-index: 3;
 }
 
 .sh-translate-section {
@@ -881,6 +1028,30 @@
   transform: translateY(0) scale(1);
 }
 
+.sh-js .sh-duo-card-quiz[data-reveal] {
+  transform: translateY(28px) rotate(1.5deg);
+}
+
+.sh-js .sh-duo-card-quiz[data-reveal].is-visible {
+  transform: translateY(0) rotate(1.5deg);
+}
+
+.sh-js .sh-duo-card-reading[data-reveal] {
+  transform: translateY(28px) rotate(2.5deg);
+}
+
+.sh-js .sh-duo-card-reading[data-reveal].is-visible {
+  transform: translateY(0) rotate(2.5deg);
+}
+
+.sh-js .sh-duo-card-flashcards[data-reveal] {
+  transform: translateY(28px) rotate(-3deg);
+}
+
+.sh-js .sh-duo-card-flashcards[data-reveal].is-visible {
+  transform: translateY(0) rotate(-3deg);
+}
+
 html.dark .sh-page {
   --sh-ink: #f7f6ff;
   --sh-muted: #bec3d5;
@@ -940,6 +1111,18 @@ html.dark .sh-reading {
     #181722;
 }
 
+html.dark .sh-duo-section {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(67, 164, 191, 0.18), transparent 25%),
+    radial-gradient(circle at 8% 86%, rgba(101, 88, 245, 0.18), transparent 26%),
+    linear-gradient(140deg, #171525 0%, #242044 52%, #172a3a 100%);
+}
+
+html.dark .sh-duo-points > div {
+  background: rgba(21, 21, 37, 0.72);
+  border-color: rgba(224, 220, 255, 0.12);
+}
+
 @media (max-width: 1050px) {
   .sh-hero-grid {
     grid-template-columns: minmax(0, 0.95fr) minmax(390px, 1.05fr);
@@ -958,9 +1141,14 @@ html.dark .sh-reading {
   }
 
   .sh-reading-grid,
+  .sh-duo-grid,
   .sh-progress-grid {
     gap: 3.5rem;
     grid-template-columns: minmax(0, 0.8fr) minmax(390px, 1.2fr);
+  }
+
+  .sh-duo-visual {
+    min-height: 620px;
   }
 }
 
@@ -971,6 +1159,7 @@ html.dark .sh-reading {
 
   .sh-hero-grid,
   .sh-reading-grid,
+  .sh-duo-grid,
   .sh-translate-grid,
   .sh-progress-grid {
     grid-template-columns: 1fr;
@@ -1034,8 +1223,27 @@ html.dark .sh-reading {
   }
 
   .sh-reading-grid,
+  .sh-duo-grid,
   .sh-progress-grid {
     text-align: center;
+  }
+
+  .sh-duo-copy {
+    margin-inline: auto;
+    max-width: 680px;
+  }
+
+  .sh-duo-points {
+    margin-inline: auto;
+    max-width: 560px;
+    text-align: left;
+  }
+
+  .sh-duo-visual {
+    margin-inline: auto;
+    max-width: 720px;
+    min-height: 660px;
+    width: 100%;
   }
 
   .sh-check-list {
@@ -1138,6 +1346,7 @@ html.dark .sh-reading {
 
   .sh-section-heading h2,
   .sh-reading-copy h2,
+  .sh-duo-copy h2,
   .sh-translate-copy h2,
   .sh-progress-copy h2,
   .sh-cta-copy h2 {
@@ -1184,6 +1393,24 @@ html.dark .sh-reading {
     bottom: -18px;
     right: 2%;
     width: 135px;
+  }
+
+  .sh-duo-visual {
+    min-height: 520px;
+  }
+
+  .sh-duo-card-quiz {
+    width: 100%;
+  }
+
+  .sh-duo-card-reading {
+    right: 0;
+    width: 76%;
+  }
+
+  .sh-duo-card-flashcards {
+    left: 0;
+    width: 42%;
   }
 
   .sh-translate-visual,
@@ -1253,7 +1480,8 @@ html.dark .sh-reading {
   }
 
   .sh-js [data-reveal],
-  .sh-js .sh-hero-visual[data-reveal] {
+  .sh-js .sh-hero-visual[data-reveal],
+  .sh-js .sh-duo-card[data-reveal] {
     opacity: 1;
     transform: none;
   }
