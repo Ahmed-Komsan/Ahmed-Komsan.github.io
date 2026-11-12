@@ -1,6 +1,6 @@
 +++
 title = 'SpeakHero, Language Learning'
-description = 'Build practical vocabulary, improve your pronunciation, read, listen, translate, and track your progress with SpeakHero.'
+description = 'Build practical vocabulary, improve your pronunciation, read, listen, translate typed, spoken, and camera-captured text, and track your progress with SpeakHero.'
 type = 'speakhero'
 draft = false
 toc = false

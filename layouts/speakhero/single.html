@@ -13,7 +13,7 @@
   "name": "SpeakHero, Language Learning",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "iOS, iPadOS",
-  "description": "Build practical vocabulary, improve pronunciation, read, listen, translate, and track learning progress in one focused app.",
+  "description": "Build practical vocabulary, improve pronunciation, read, listen, translate typed, spoken, and camera-captured text, and track learning progress in one focused app.",
   "url": "{{ .Permalink }}",
   "downloadUrl": "https://apps.apple.com/app/id6744280195",
   "image": "{{ "/apps/speakhero/images/speakhero-og.jpg" | absURL }}",
@@ -80,12 +80,12 @@
         </div>
         <div class="sh-phone sh-phone-center">
           <img
-            src="{{ "/apps/speakhero/images/translate-720.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/translate-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/translate-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/translate-960.webp" | relURL }} 960w"
+            src="{{ "/apps/speakhero/images/translate-camera-720.webp" | relURL }}"
+            srcset="{{ "/apps/speakhero/images/translate-camera-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/translate-camera-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/translate-camera-960.webp" | relURL }} 960w"
             sizes="(max-width: 700px) 40vw, 290px"
             width="720"
             height="1561"
-            alt="SpeakHero translation screen translating spoken Japanese into French"
+            alt="SpeakHero translation screen with camera and voice translation controls"
             fetchpriority="high"
           >
         </div>
@@ -109,7 +109,7 @@
     <div class="sh-shell sh-proof-grid" data-reveal>
       <div><strong>3 languages</strong><span>German · Arabic · English</span></div>
       <div><strong>70+ topics</strong><span>Built around everyday life</span></div>
-      <div><strong>One learning loop</strong><span>Learn · Practice · Use</span></div>
+      <div><strong>Built for every screen</strong><span>iPhone · iPhone Duo · iPad</span></div>
       <div><strong>Learn anywhere</strong><span>Downloadable resources</span></div>
     </div>
   </section>
@@ -229,76 +229,25 @@
             alt="SpeakHero reading library on iPad"
           >
         </div>
-        <div class="sh-phone sh-reading-phone">
-          <img
-            src="{{ "/apps/speakhero/images/article-details-720.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/article-details-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/article-details-720.webp" | relURL }} 720w"
-            sizes="220px"
-            width="720"
-            height="1561"
-            loading="lazy"
-            alt="Guided story playback on iPhone"
-          >
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sh-section sh-duo-section" aria-labelledby="speakhero-duo-title">
-    <div class="sh-shell sh-duo-grid">
-      <div class="sh-duo-copy" data-reveal>
-        <p class="sh-kicker">Built for every screen</p>
-        <h2 id="speakhero-duo-title">Open it up.<br><span>Keep learning.</span></h2>
-        <p>SpeakHero adapts lessons, flashcards, quizzes, reading, translation, and progress to every iPhone Duo posture, from quick practice on the outer display to focused sessions on the expanded screen.</p>
-        <div class="sh-duo-points" role="list" aria-label="iPhone Duo experience highlights">
-          <div role="listitem">
-            <span aria-hidden="true">01</span>
-            <p><strong>Adaptive layouts</strong>Content reflows naturally as the screen changes.</p>
-          </div>
-          <div role="listitem">
-            <span aria-hidden="true">02</span>
-            <p><strong>Quick or focused</strong>Practice on the outer display, then unfold for more room.</p>
-          </div>
-          <div role="listitem">
-            <span aria-hidden="true">03</span>
-            <p><strong>One learning loop</strong>Your lessons and progress stay together.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="sh-duo-visual" role="group" aria-label="SpeakHero adapting quizzes, flashcards, and reading to iPhone Duo">
-        <div class="sh-duo-card sh-duo-card-quiz" data-reveal>
-          <img
-            src="{{ "/apps/speakhero/images/duo-quiz-screen-1080.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/duo-quiz-screen-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/duo-quiz-screen-1080.webp" | relURL }} 1080w, {{ "/apps/speakhero/images/duo-quiz-screen-1440.webp" | relURL }} 1440w"
-            sizes="(max-width: 620px) 92vw, (max-width: 820px) 78vw, 650px"
-            width="1440"
-            height="1013"
-            loading="lazy"
-            alt="SpeakHero quiz feedback arranged across the expanded iPhone Duo display"
-          >
-        </div>
-        <div class="sh-duo-card sh-duo-card-reading" data-reveal>
-          <img
-            src="{{ "/apps/speakhero/images/duo-reading-screen-1080.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/duo-reading-screen-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/duo-reading-screen-1080.webp" | relURL }} 1080w, {{ "/apps/speakhero/images/duo-reading-screen-1440.webp" | relURL }} 1440w"
-            sizes="(max-width: 620px) 70vw, (max-width: 820px) 58vw, 500px"
-            width="1440"
-            height="1013"
-            loading="lazy"
-            alt="A guided SpeakHero article using the expanded iPhone Duo reading layout"
-          >
-        </div>
-        <div class="sh-duo-card sh-duo-card-flashcards" data-reveal>
-          <img
-            src="{{ "/apps/speakhero/images/duo-flashcards-screen-720.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/duo-flashcards-screen-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/duo-flashcards-screen-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/duo-flashcards-screen-960.webp" | relURL }} 960w"
-            sizes="(max-width: 620px) 38vw, (max-width: 820px) 28vw, 260px"
-            width="960"
-            height="1397"
-            loading="lazy"
-            alt="SpeakHero flashcards on the portrait iPhone Duo display"
-          >
+        <div class="sh-adaptive-showcase sh-reading-showcase">
+          <picture>
+            <source
+              media="(min-width: 621px)"
+              srcset="{{ "/apps/speakhero/images/duo-reading-screen-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/duo-reading-screen-1080.webp" | relURL }} 1080w, {{ "/apps/speakhero/images/duo-reading-screen-1440.webp" | relURL }} 1440w"
+              sizes="(max-width: 820px) 68vw, 460px"
+              width="1440"
+              height="1013"
+            >
+            <img
+              src="{{ "/apps/speakhero/images/article-details-720.webp" | relURL }}"
+              srcset="{{ "/apps/speakhero/images/article-details-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/article-details-720.webp" | relURL }} 720w"
+              sizes="135px"
+              width="720"
+              height="1561"
+              loading="lazy"
+              alt="Guided SpeakHero article adapting between iPhone and the expanded iPhone Duo display"
+            >
+          </picture>
         </div>
       </div>
     </div>
@@ -310,22 +259,31 @@
         <span class="sh-translation-token sh-token-one" aria-hidden="true">Wo ist der Bahnhof?</span>
         <span class="sh-translation-token sh-token-two" aria-hidden="true">أين المحطة؟</span>
         <span class="sh-translation-token sh-token-three" aria-hidden="true">Where is the station?</span>
-        <div class="sh-phone sh-translate-phone">
-          <img
-            src="{{ "/apps/speakhero/images/translate-720.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/translate-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/translate-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/translate-960.webp" | relURL }} 960w"
-            sizes="(max-width: 700px) 64vw, 330px"
-            width="720"
-            height="1561"
-            loading="lazy"
-            alt="SpeakHero translating Japanese text into French"
-          >
+        <div class="sh-adaptive-showcase sh-translate-showcase">
+          <picture>
+            <source
+              media="(min-width: 621px)"
+              srcset="{{ "/apps/speakhero/images/duo-translate-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/duo-translate-1080.webp" | relURL }} 1080w, {{ "/apps/speakhero/images/duo-translate-1440.webp" | relURL }} 1440w"
+              sizes="(max-width: 820px) 88vw, 620px"
+              width="1440"
+              height="1013"
+            >
+            <img
+              src="{{ "/apps/speakhero/images/translate-camera-720.webp" | relURL }}"
+              srcset="{{ "/apps/speakhero/images/translate-camera-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/translate-camera-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/translate-camera-960.webp" | relURL }} 960w"
+              sizes="(max-width: 620px) 66vw, 620px"
+              width="720"
+              height="1561"
+              loading="lazy"
+              alt="SpeakHero translating text with camera, voice, and typing controls on iPhone and iPhone Duo"
+            >
+          </picture>
         </div>
       </div>
       <div class="sh-translate-copy" data-reveal>
-        <p class="sh-kicker">Understand instantly</p>
-        <h2>Type it.<br>Say it.<br><span>Hear it.</span></h2>
-        <p>Translate by typing or speaking, then listen to the result, copy it, or share it when you need it.</p>
+        <p class="sh-kicker">Translate your surroundings</p>
+        <h2>Type it.<br>Say it.<br><span>Point at it.</span></h2>
+        <p>Translate by typing, speaking, or pointing your camera at text. You can also choose a photo, then listen to, copy, or share the result.</p>
         <div class="sh-language-pills" aria-label="Supported languages">
           <span>English</span><span>Deutsch</span><span>العربية</span>
         </div>
@@ -348,16 +306,25 @@
       <div class="sh-progress-visual" data-reveal>
         <div class="sh-progress-ring sh-ring-one" aria-hidden="true"></div>
         <div class="sh-progress-ring sh-ring-two" aria-hidden="true"></div>
-        <div class="sh-phone sh-progress-phone">
-          <img
-            src="{{ "/apps/speakhero/images/progress-720.webp" | relURL }}"
-            srcset="{{ "/apps/speakhero/images/progress-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/progress-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/progress-960.webp" | relURL }} 960w"
-            sizes="(max-width: 700px) 64vw, 330px"
-            width="720"
-            height="1561"
-            loading="lazy"
-            alt="SpeakHero progress dashboard showing learning statistics and achievements"
-          >
+        <div class="sh-adaptive-showcase sh-progress-showcase">
+          <picture>
+            <source
+              media="(min-width: 621px)"
+              srcset="{{ "/apps/speakhero/images/duo-progress-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/duo-progress-1080.webp" | relURL }} 1080w, {{ "/apps/speakhero/images/duo-progress-1440.webp" | relURL }} 1440w"
+              sizes="(max-width: 820px) 88vw, 620px"
+              width="1440"
+              height="1013"
+            >
+            <img
+              src="{{ "/apps/speakhero/images/progress-720.webp" | relURL }}"
+              srcset="{{ "/apps/speakhero/images/progress-480.webp" | relURL }} 480w, {{ "/apps/speakhero/images/progress-720.webp" | relURL }} 720w, {{ "/apps/speakhero/images/progress-960.webp" | relURL }} 960w"
+              sizes="(max-width: 620px) 66vw, 620px"
+              width="720"
+              height="1561"
+              loading="lazy"
+              alt="SpeakHero progress dashboard adapting between iPhone and the expanded iPhone Duo display"
+            >
+          </picture>
         </div>
       </div>
     </div>
